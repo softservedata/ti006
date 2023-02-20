@@ -16,5 +16,5 @@
 - check branch **git branch**
 - create new branch **git branch <NAME>**
 - switch to new branch **git checkout <NAME>**
-- open project in Idea/Eclipse;
+- open project in Idea/Eclipse/VSCode;
 - write new code;
