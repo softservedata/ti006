@@ -1,7 +1,9 @@
-package com.softserve.edu05str;
+package com.softserve.edu04set.edu05str;
 
 //import java.util.ArrayList;
 //import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,8 +24,8 @@ public class AppRegex {
 		//String pattern = "<.+>";
 		//String pattern = "<[^>]+>"; // All tags
 		//String pattern = ">[^><]+<"; // All text
-		//String pattern = "<([^>]+)>[^><]+</\\1>"; // \1 == group(1)
-		//String text = "<p><b>Beginning with bold text</b> next, <span>text</span> body,<i>italic text</i> end of text.</p>";
+		String pattern = "<([^>]+)>[^><]+</\\1>"; // \1 == group(1)
+		String text = "<p><b>Beginning with bold text</b> next, <span>text</span> body,<i>italic text</i> end of text.</p>";
 		*/
 		//
 		//String pattern = "\\w+(\\.\\w+)*@(\\w+\\.)+\\w{2,}";
@@ -60,7 +62,7 @@ public class AppRegex {
 			double num = Double.valueOf(sNum);
 			System.out.println("num + 1 = " + (num + 1.11));
 			*/
-			System.out.println("grop1 = " + m.group(1));
+			//System.out.println("grop1 = " + m.group(1));
 			//
 			System.out.print(text.substring(m.start(), m.end()) + "*");
 			//System.out.print(text.substring(m.start() + 1, m.end() - 1).trim() + "*");

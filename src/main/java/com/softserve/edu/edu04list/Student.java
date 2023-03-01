@@ -1,4 +1,4 @@
-package com.softserve.edu04list;
+package com.softserve.edu.edu04list;
 
 import java.util.Comparator;
 

@@ -1,4 +1,4 @@
-package com.softserve.edu05str;
+package com.softserve.edu04set.edu05str;
 
 public class AppStr {
     public static void main(String[] args) {
@@ -40,8 +40,9 @@ public class AppStr {
 		System.out.println(str);
 		str = str.replace("a", "--");
 		//str = str.replaceAll("a\\b", "--"); // \b word boundary
-		//str = str.replaceFirst("a", "--");
-		//str = str.replaceFirst("b", "--");
+		//str = str.replaceAll("\\Ba\\B", "--"); // \B no word boundary
+		//str = str.replaceFirst("\\Ba", "--");
+		//str = str.replaceFirst("\\Bab", "--");
 		System.out.println(str);
 		str = ""; // null
 		System.out.println("str.isEmpty() = " + str.isEmpty());
@@ -61,7 +62,7 @@ public class AppStr {
         System.out.println("res = " + s);
         */
 		/*-
-		String a0 = "Java"; // equals new String("Java");
+		String a0 = new String("Java").intern(); // "Java"; // equals new String("Java");
 		String a1 = "Java"; // set reference
 		String a2 = new String("Java"); // create new object
 		//
@@ -78,6 +79,15 @@ public class AppStr {
 		System.out.println("a1.hashCode() =  " + a1.hashCode());
 		System.out.println("a2.hashCode() =  " + a2.hashCode());
 		*/
+		/*
+		String str = "JAVA-SE,8      First.Second";
+		str = str.replaceAll(" +", " ");
+		System.out.println("str = " + str);
+		String[] arr = str.split("-|\\.|,| ");
+		for (String w : arr) {
+			System.out.println(w);   // JAVA SE 8
+		}
+		*/
  		/*-
 		final double PI = 3.1415926;
 		String formatStr = "%S is =%06.2f\n";
@@ -86,7 +96,7 @@ public class AppStr {
 		String s = String.format(formatStr, "pi", PI);
 		System.out.println(s);
 		System.out.printf(formatStr, "pi", PI);
-		System.out.printf("hashcode =%h", 64);
+		System.out.printf("hashcode =%h", 640);
 		*/
 		// /*-
 		String s1 = new String("Hello");
@@ -101,7 +111,7 @@ public class AppStr {
 		System.out.println(" sb = " + sb); // toString()
 		System.out.println(" sb.length() = " + sb.length());
 		System.out.println(" sb.capacity() = " + sb.capacity());
-		sb.append("12345");
+		sb.append("1234");
 		System.out.println("new sb.length() = " + sb.length());
 		System.out.println("new sb.capacity() = " + sb.capacity());
 		System.out.println("Reverse sb = " + sb.reverse());
