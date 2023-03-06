@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ti006junit5</artifactId>
+  <artifactId>ti006testng</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -21,7 +21,7 @@
     <testng.reports.directory>./target/surefire-reports/test-output</testng.reports.directory>
     <aspectj.version>1.9.19</aspectj.version>
     <!-- - - - - - Password - - - - - -->
-    <application.password>null123</application.password>
+      <application.password>null123</application.password>
   </properties>
 
   <dependencies>
@@ -36,7 +36,7 @@
       <scope>test</scope>
     </dependency>
     -->
-
+    <!--
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -57,6 +57,7 @@
       <version>1.9.1</version>
       <scope>test</scope>
     </dependency>
+    -->
 
     <!-- <dependency> -->
     <!-- <groupId>org.testng</groupId> -->
@@ -65,15 +66,15 @@
     <!-- <scope>test</scope> -->
     <!-- </dependency> -->
 
-<!--    <dependency>-->
-<!--      <groupId>org.testng</groupId>-->
-<!--      <artifactId>testng</artifactId>-->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
       <!--            <version>6.14.3</version>-->
-<!--      <version>7.4.0</version>-->
+      <!--      <version>7.4.0</version>-->
       <!--  <version>7.5</version>-->
-      <!--      <version>7.6.1</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+            <version>7.7.1</version>
+      <scope>test</scope>
+    </dependency>
 
     <!-- - - - - - DB - - - - - -->
     <dependency>
@@ -279,21 +280,23 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.2</version>
         <configuration>
+          <!--
           <includes>
               <include>**/*.java</include>
           </includes>
+          -->
           <systemPropertyVariables>
             <surefire.application.password>
               ${application.password}
             </surefire.application.password>
           </systemPropertyVariables>
 <!--          <reportsDirectory>${testng.reports.directory}</reportsDirectory>-->
-<!--          <suiteXmlFiles>-->
-<!--            <suiteXmlFile>testng.xml</suiteXmlFile>-->
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
             <!-- <suiteXmlFile>testng2.xml</suiteXmlFile> -->
             <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
             <!--            <suiteXmlFile>testng03par.xml</suiteXmlFile>-->
-<!--          </suiteXmlFiles>-->
+          </suiteXmlFiles>
 <!--          <argLine>-->
 <!--            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
 <!--          </argLine>-->
