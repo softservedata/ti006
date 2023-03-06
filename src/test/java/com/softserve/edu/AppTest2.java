@@ -1,6 +1,8 @@
 package com.softserve.edu;
 
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class AppTest2 {
 

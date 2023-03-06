@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ti006main</artifactId>
+  <artifactId>ti006junit5</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -28,14 +28,15 @@
 
     <!-- - - - - - Test - - - - - -->
 
+    <!--
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+    -->
 
-   <!--
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -56,7 +57,6 @@
       <version>1.9.1</version>
       <scope>test</scope>
     </dependency>
-    -->
 
     <!-- <dependency> -->
     <!-- <groupId>org.testng</groupId> -->
@@ -65,15 +65,15 @@
     <!-- <scope>test</scope> -->
     <!-- </dependency> -->
 
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
+<!--    <dependency>-->
+<!--      <groupId>org.testng</groupId>-->
+<!--      <artifactId>testng</artifactId>-->
       <!--            <version>6.14.3</version>-->
-      <version>7.4.0</version>
+<!--      <version>7.4.0</version>-->
       <!--  <version>7.5</version>-->
       <!--      <version>7.6.1</version>-->
-      <scope>test</scope>
-    </dependency>
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
 
     <!-- - - - - - DB - - - - - -->
     <dependency>
@@ -130,13 +130,13 @@
     </dependency>
     -->
 
-    <dependency>
-      <groupId>org.powermock</groupId>
-      <artifactId>powermock-module-testng</artifactId>
-      <version>2.0.9</version>
+<!--    <dependency>-->
+<!--      <groupId>org.powermock</groupId>-->
+<!--      <artifactId>powermock-module-testng</artifactId>-->
+<!--      <version>2.0.9</version>-->
       <!--             <version>1.7.4</version>-->
-      <scope>test</scope>
-    </dependency>
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
 
     <!--
     <dependency>
