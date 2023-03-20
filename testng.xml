@@ -9,14 +9,14 @@
         <parameter name="number" value="123"/>
         <parameter name="url" value="https://www.google.com"/>
         <classes>
-            <class name="com.softserve.testng.TestNGTest6" />
-            <class name="com.softserve.testng.FirstTest" />
-            <class name="com.softserve.edu.AppTest">
-                <methods>
-                    <include name="testApp1"/>
-                    <!--             <include name="testApp2" />-->
-                </methods>
-            </class>
+<!--            <class name="com.softserve.testng.TestNGTest6" />-->
+            <class name="com.softserve.edu.SearchFirstTest" />
+<!--            <class name="com.softserve.edu.AppTest">-->
+<!--                <methods>-->
+<!--                    <include name="testApp1"/>-->
+<!--                    &lt;!&ndash;             <include name="testApp2" />&ndash;&gt;-->
+<!--                </methods>-->
+<!--            </class>-->
         </classes>
     </test> <!-- Test -->
 
