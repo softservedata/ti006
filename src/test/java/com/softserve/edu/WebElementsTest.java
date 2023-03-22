@@ -13,6 +13,7 @@ import java.util.List;
 
 public class WebElementsTest {
     private final String BASE_URL = "http://taqc-opencart.epizy.com/";
+    //private final String BASE_URL = "https://demo.opencart.com/";
     private final Long IMPLICITLY_WAIT_SECONDS = 10L;
     private final Long ONE_SECOND_DELAY = 1000L;
     private WebDriver driver;
