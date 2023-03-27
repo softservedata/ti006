@@ -33,15 +33,19 @@ public class SearchFirstTest {
     @Test
     public void checkMac() {
         //System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
+        //System.setProperty("webdriver.http.factory", "jdk-http-client");
         WebDriverManager.chromedriver().setup();
         //
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(options);
-        //WebDriver driver = new ChromeDriver();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver();
         //
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT_SECONDS)); // 0 by default
         //driver.manage().timeouts().implicitlyWait(IMPLICITLY_WAIT_SECONDS, TimeUnit.SECONDS);
+        //driver.manage( ).timeouts( ).pageLoadTimeout(100, SECONDS);
+        //driver.manage( ).timeouts().setScriptTimeout(100, SECONDS);
+        //
         driver.manage().window().maximize();
         presentationSleep(); // For Presentation ONLY
         //

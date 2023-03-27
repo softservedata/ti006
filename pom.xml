@@ -169,9 +169,15 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <!--      <version>4.1.4</version>-->
-      <version>4.8.1</version>
+      <version>4.8.2</version>
       <scope>test</scope>
     </dependency>
+
+<!--    <dependency>-->
+<!--      <groupId>org.seleniumhq.selenium</groupId>-->
+<!--      <artifactId>selenium-http-jdk-client</artifactId>-->
+<!--      <version>4.8.2</version>-->
+<!--    </dependency>-->
 
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
