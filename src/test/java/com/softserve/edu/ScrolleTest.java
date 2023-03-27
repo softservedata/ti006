@@ -58,10 +58,10 @@ public class ScrolleTest {
 
     @BeforeClass
     public void beforeClass() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        //driver = new ChromeDriver();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         //driver.manage().timeouts().implicitlyWait(IMPLICITLY_WAIT_SECONDS, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT_SECONDS)); // 0 by default
         driver.manage().window().maximize();
@@ -73,7 +73,7 @@ public class ScrolleTest {
             String testName = result.getName();
             System.out.println("***TC error, name = " + testName + " ERROR");
             takeScreenShot(testName);
-            takePageSource(testName);
+            //takePageSource(testName);
         }
     }
 
@@ -105,8 +105,8 @@ public class ScrolleTest {
         Thread.sleep(2000); // For Presentation Only
         // */
         //
-        takeScreenShot("checkScroll");
-        takePageSource("checkScroll");
+        takeScreenShot("checkScroll_Test");
+        //takePageSource("checkScroll");
         //
         WebElement browserstack = driver.findElement(By.cssSelector("a[href*='www.browserstack.com']"));
         System.out.println("browserstack.isDisplayed() = " + browserstack.isDisplayed());
@@ -114,8 +114,8 @@ public class ScrolleTest {
         System.out.println("browserstack.isSelected() = " + browserstack.isSelected());
         Thread.sleep(2000); // For Presentation Only
         //
-        // browserstack.click(); //ERROR
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", browserstack);
+        //browserstack.click(); //ERROR
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", browserstack); // OK
         //
         //driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
