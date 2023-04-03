@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ti006selen</artifactId>
+  <artifactId>ti006pageobj</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
