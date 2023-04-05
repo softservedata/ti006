@@ -3,6 +3,8 @@ package com.softserve.edu.opencart.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.softserve.edu.opencart.tools.search.Search;
+import com.softserve.edu.opencart.tools.search.SearchStrategy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,23 +16,23 @@ public class DropdownComponent {
     //public static final Logger logger = LoggerFactory.getLogger(DropdownComponent.class); // org.slf4j.LoggerFactory
     protected final String OPTIONNAME_NOT_FOUND = "OptionName not Found.";
     //
-    protected WebDriver driver;
-    //protected Search search;
+    //protected WebDriver driver;
+    protected Search search;
     //
     private List<WebElement> listOptions;
 
-    public DropdownComponent(WebDriver driver, By searchLocator) {
-    //public DropdownComponent(By searchLocator) {
-        this.driver = driver;
-        //search = SearchStrategy.getSearch();
+    //public DropdownComponent(WebDriver driver, By searchLocator) {
+    public DropdownComponent(By searchLocator) {
+        //this.driver = driver;
+        search = SearchStrategy.getSearch();
         initElements(searchLocator);
     }
 
     private void initElements(By searchLocator) {
         // init elements
-        listOptions = driver.findElements(searchLocator);
+//        listOptions = driver.findElements(searchLocator);
         //
-        //listOptions = search.searchWebElements(searchLocator); // for Strategy
+        listOptions = search.searchWebElements(searchLocator); // for Strategy
     }
 
     // Page Object

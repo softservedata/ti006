@@ -1,6 +1,7 @@
 package com.softserve.edu.opencart.tests;
 
 import com.softserve.edu.opencart.pages.HomePage;
+import com.softserve.edu.opencart.tools.browser.DriverWrapper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -68,7 +69,8 @@ public abstract class TestRunnerFirst {
 
     protected HomePage loadApplication() {
         //driver.get(BASE_URL);
-        return new HomePage(driver);
-        //return new HomePage(getDriver());
+        //return new HomePage(driver);
+        //return new HomePage(DriverWrapper.getDriver());
+        return new HomePage();
     }
 }

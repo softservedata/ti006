@@ -11,13 +11,16 @@ public class UnsuccessfulLoginPage extends LoginPage {
     //
     private WebElement alertWarning;
 
-    public UnsuccessfulLoginPage(WebDriver driver) {
-        super(driver);
+    //public UnsuccessfulLoginPage(WebDriver driver) {
+    public UnsuccessfulLoginPage() {
+        //super(driver);
         initElements();
     }
 
     private void initElements() {
-        alertWarning = driver.findElement(By.cssSelector(".alert.alert-danger"));
+//        alertWarning = driver.findElement(By.cssSelector(".alert.alert-danger"));
+        //
+        alertWarning = search.cssSelector(".alert.alert-danger");
     }
 
     // Page Object

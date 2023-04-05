@@ -1,5 +1,6 @@
 package com.softserve.edu.opencart.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,15 +10,19 @@ public class EditAccountPage extends AccountSidebarLoggedPart {
     private WebElement firstNameField;
     private WebElement continueButton;
 
-    public EditAccountPage(WebDriver driver) {
-        super(driver);
+    //public EditAccountPage(WebDriver driver) {
+    public EditAccountPage() {
+        //super(driver);
         initElements();
     }
 
     private void initElements() {
         // init elements
-        firstNameField = driver.findElement(By.name("firstname"));
-        continueButton = driver.findElement(By.cssSelector("input.btn.btn-primary"));
+//        firstNameField = driver.findElement(By.name("firstname"));
+//        continueButton = driver.findElement(By.cssSelector("input.btn.btn-primary"));
+        //
+        firstNameField = search.name("firstname");
+        continueButton = search.cssSelector("input.btn.btn-primary");
     }
 
     // Page Object
@@ -60,9 +65,11 @@ public class EditAccountPage extends AccountSidebarLoggedPart {
 
     // Business Logic
 
+    @Step("STEP GOTO CONTINUE")
     public MyAccountPage gotoContinue() {
         clickContinueButton();
-        return new MyAccountPage(driver);
+        //return new MyAccountPage(driver);
+        return new MyAccountPage();
     }
 
 }
