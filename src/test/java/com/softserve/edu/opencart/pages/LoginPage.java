@@ -1,6 +1,7 @@
 package com.softserve.edu.opencart.pages;
 
 //import com.softserve.edu.opencart.data.IUser;
+import com.softserve.edu.opencart.data.IUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -93,28 +94,28 @@ public class LoginPage extends AccountSidebarGuestPart {
         setPassword(password);
     }
 
-    //public void fillLogin(IUser user) {
-    public void fillLogin(String email, String password) {
-//        enterEmail(user.getEmail());
-//        enterPassword(user.getPassword());
-        enterEmail(email);
-        enterPassword(password);
+    public void fillLogin(IUser user) {
+    //public void fillLogin(String email, String password) {
+        enterEmail(user.getEmail());
+        enterPassword(user.getPassword());
+//        enterEmail(email);
+//        enterPassword(password);
         clickLoginButton();
     }
 
     // Business Logic
 
-    //public MyAccountPage successfulLogin(IUser validUser) {
-    public MyAccountPage successfulLogin(String email, String password) {
-//        fillLogin(validUser);
-        fillLogin(email, password);
+    public MyAccountPage successfulLogin(IUser validUser) {
+    //public MyAccountPage successfulLogin(String email, String password) {
+        fillLogin(validUser);
+//        fillLogin(email, password);
         return new MyAccountPage(driver);
     }
 
-//    public UnsuccessfulLoginPage unsuccessfulLoginPage(IUser invalidUser) {
-    public UnsuccessfulLoginPage unsuccessfulLoginPage(String email, String password) {
-//        fillLogin(invalidUser);
-        fillLogin(email, password);
+    public UnsuccessfulLoginPage unsuccessfulLoginPage(IUser invalidUser) {
+    //public UnsuccessfulLoginPage unsuccessfulLoginPage(String email, String password) {
+        fillLogin(invalidUser);
+        //fillLogin(email, password);
         return new UnsuccessfulLoginPage(driver);
     }
 
