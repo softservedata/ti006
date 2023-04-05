@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CurrencyTest extends TestRunnerFirst {
+public class CurrencyTest extends TestRunnerStrategy {
 
     @DataProvider//(parallel = true)
     public Object[][] searchCurrencies() {

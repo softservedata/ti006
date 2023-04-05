@@ -3,14 +3,14 @@
 
 <suite name="Suite01">
     <parameter name="browser" value="chrome"/>
+<!--    <parameter name="browser" value="firefox"/>-->
 
     <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
     <test verbose="9" name="TestGroup01">
         <parameter name="number" value="123"/>
         <parameter name="url" value="https://www.google.com"/>
         <classes>
-            <class name="com.softserve.edu.WebElementsTest" />
-            <class name="com.softserve.edu.SearchFirstTest" />
+            <class name="com.softserve.edu.opencart.tests.LoginTest" />
 <!--            <class name="com.softserve.edu.AppTest">-->
 <!--                <methods>-->
 <!--                    <include name="testApp1"/>-->

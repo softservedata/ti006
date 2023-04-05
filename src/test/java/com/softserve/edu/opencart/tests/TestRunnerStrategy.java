@@ -37,10 +37,10 @@ import com.softserve.edu.opencart.tools.search.SearchStrategy;
 
 public abstract class TestRunnerStrategy {
     private final String BASE_URL = "http://taqc-opencart.epizy.com/";
-    private final Long IMPLICITLY_WAIT_SECONDS = 10L;
+    //private final Long IMPLICITLY_WAIT_SECONDS = 10L;
     private final Long ONE_SECOND_DELAY = 1000L;
     private final String TIME_TEMPLATE = "yyyy-MM-dd_HH-mm-ss-S";
-    private Browsers browser = Browsers.CHROME_TEMPORARY;
+    private Browsers browser = Browsers.DEFAULT_TEMPORARY;
     //private WebDriver driver;
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -165,8 +165,8 @@ public abstract class TestRunnerStrategy {
     @BeforeMethod
     public void beforeMethod() {
         //DriverWrapper.setDriver(browser);
-        //SearchStrategy.setImplicitStrategy();
-        SearchStrategy.setExplicitStrategy();
+        SearchStrategy.setImplicitStrategy();
+        //SearchStrategy.setExplicitStrategy(); // TODO Error if use parallel !!!
         //driver.get(BASE_URL);
         // TODO
         //DriverWrapper.setDriver(Browsers.CHROME_TEMPORARY);
