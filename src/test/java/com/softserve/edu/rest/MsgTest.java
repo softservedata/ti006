@@ -22,14 +22,18 @@ public class MsgTest {
         //
         request = new Request
                 .Builder()
-                .url("https://speak-ukrainian.org.ua/dev/api/messages/recipient/1")
+                //.url("https://speak-ukrainian.org.ua/dev/api/messages/recipient/1")
+                //.url("https://speak-ukrainian.org.ua/api/roles")
+                .url("https://speak-ukrainian.org.ua/dev/api/user/32")
                 .get()
                 .addHeader("accept","*/*")
-                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiIxIiwiZXhwIjoxNjcyNzM5MzAwfQ.Bf8MLwm59lNKWV0El6QHIUyLfAFL1FtBleJG_qOdA8RxksQETQ6JoFr-8UXgABp8fLZZvcC6PJorE0wJRq14_A")
+                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJleHAiOjE2ODA3MDkxMDJ9.myntA2GDjmQtAzvpEqUltQz4QZMJ1wkaait3T1iroNVITU_YIY_pfF47WyCW1A893hz8CgdHOVBAFTg_m0Deqw")
                 .build();
         response = client.newCall(request).execute();
         resultJson = response.body().string();
         //
         System.out.println("resultJson: " + resultJson);
     }
+
+
 }
