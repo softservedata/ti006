@@ -2,21 +2,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Suite01">
-    <parameter name="browser" value="chrome"/>
 
     <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
     <test verbose="9" name="TestGroup01">
-        <parameter name="number" value="123"/>
-        <parameter name="url" value="https://www.google.com"/>
+        <parameter name="number" value="2"/>
         <classes>
-            <class name="com.softserve.edu.WebElementsTest" />
-            <class name="com.softserve.edu.SearchFirstTest" />
-<!--            <class name="com.softserve.edu.AppTest">-->
-<!--                <methods>-->
-<!--                    <include name="testApp1"/>-->
-<!--                    &lt;!&ndash;             <include name="testApp2" />&ndash;&gt;-->
-<!--                </methods>-->
-<!--            </class>-->
+            <!--            <class name="com.softserve.edu03.mockito.ProductUnitTest"/>-->
+            <class name="com.softserve.edu.AppTest">
+                <methods>
+                    <include name="testApp1"/>
+                    <!--             <include name="testApp2" />-->
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+    <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
+    <test verbose="9" name="TestGroup02">
+        <parameter name="number" value="2"/>
+        <classes>
+            <class name="com.softserve.edu.AppTest">
+                <methods>
+                    <include name="testApp2"/>
+                </methods>
+            </class>
+            <class name="com.softserve.edu.Second">
+                <methods>
+                    <include name="checkApp"/>
+                </methods>
+            </class>
         </classes>
     </test> <!-- Test -->
 
