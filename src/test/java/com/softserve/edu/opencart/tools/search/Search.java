@@ -21,6 +21,7 @@ public abstract class Search {
         try {
             return getWebElement(by);
         } catch (Exception e) {
+            // Logger.error();
             // TODO Deevelop Custom Exceptions
             throw new RuntimeException(String.format(NO_SUCH_ELEMENT, by.toString()));
         }
